@@ -81,18 +81,25 @@ Every user has a wallet in which bonuses are stored and cashed out in user's spe
          </div>
 </div>
 </div>
-  <!-- Contact -->
-  <section id="contact" class="py-20 px-6 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');">
-    <div class="max-w-3xl mx-auto bg-black bg-opacity-80 p-6 rounded-lg">
-      <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
-      <form onsubmit="submitForm(event)" class="space-y-4">
-        <input type="text" name="name" placeholder="Name" class="w-full p-3 bg-gray-900 text-white border border-gray-600 rounded" required />
-        <input type="email" name="email" placeholder="Email" class="w-full p-3 bg-gray-900 text-white border border-gray-600 rounded" required />
-        <textarea name="message" placeholder="Message" class="w-full p-3 bg-gray-900 text-white border border-gray-600 rounded h-32" required></textarea>
-        <button type="submit" class="bg-white text-black px-6 py-3 rounded hover:bg-gray-200">Send Message</button>
-      </form>
-      <p id="responseMessage" class="mt-4 text-green-400 hidden">Message sent successfully!</p>
-    </div>
+ <!-- Contact -->
+<section id="contact" class="py-20 px-6 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');">
+  <div class="max-w-3xl mx-auto bg-black bg-opacity-80 p-6 rounded-lg">
+    <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+    <form action="https://formsubmit.co/contact@valleytopcommunications.com" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Name" class="w-full p-3 bg-gray-900 text-white border border-gray-600 rounded" required />
+      <input type="email" name="email" placeholder="Email" class="w-full p-3 bg-gray-900 text-white border border-gray-600 rounded" required />
+      <textarea name="message" placeholder="Message" class="w-full p-3 bg-gray-900 text-white border border-gray-600 rounded h-32" required></textarea>
+
+      <!-- Hidden fields for form handling -->
+      
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+
+      <button type="submit" class="bg-white text-black px-6 py-3 rounded hover:bg-gray-200">Send Message</button>
+    </form>
+  </div>
+</section>
+
   </section>
 
   
@@ -194,11 +201,7 @@ Every user has a wallet in which bonuses are stored and cashed out in user's spe
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    function submitForm(event) {
-      event.preventDefault();
-      document.getElementById("responseMessage").classList.remove("hidden");
-      event.target.reset();
-    }
+    
   </script>
 
 </body>
