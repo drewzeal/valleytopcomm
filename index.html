@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VC</title>
+  <title>Valleytop</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="font-sans bg-black text-white">
@@ -145,7 +145,175 @@ Every user has a wallet in which bonuses are stored and cashed out in user's spe
     </div>
   </section> 
 
+<script>
+(function () {
 
+  const summitWrapper = document.createElement("section");
+  summitWrapper.id = "summit";
+  summitWrapper.className = "py-32 px-6 bg-black";
+
+  summitWrapper.innerHTML =
+    '<div class="max-w-7xl mx-auto space-y-32">' +
+
+    /* ================= SUMMIT SECTION ================= */
+    '<section>' +
+      '<div class="bg-black bg-opacity-90 p-12 rounded-2xl border border-gray-800">' +
+        '<div class="text-center mb-16">' +
+          '<h2 class="text-4xl md:text-5xl font-extrabold text-yellow-400 mb-4">' +
+            'Finland–Nigeria Startup Investment Summit 2026' +
+          '</h2>' +
+          '<p class="text-gray-300 text-lg">' +
+            'Bridging Nordic Innovation with African Enterprise' +
+          '</p>' +
+          '<p class="text-gray-400 mt-2">' +
+            'Helsinki & Tampere • March 25–27, 2026' +
+          '</p>' +
+        '</div>' +
+
+        '<div class="grid md:grid-cols-3 gap-10 mb-16">' +
+          '<div class="bg-gray-900 p-6 rounded-xl">' +
+            '<h4 class="font-bold text-xl mb-2">🎯 Objective</h4>' +
+            '<p class="text-gray-300">Facilitate cross-border investments, partnerships and market access between Finnish and Nigerian startups, SMEs and investors.</p>' +
+          '</div>' +
+          '<div class="bg-gray-900 p-6 rounded-xl">' +
+            '<h4 class="font-bold text-xl mb-2">👥 Who Attends</h4>' +
+            '<p class="text-gray-300">Investors, founders, accelerators, policy leaders, ecosystem builders and diaspora business leaders.</p>' +
+          '</div>' +
+          '<div class="bg-gray-900 p-6 rounded-xl">' +
+            '<h4 class="font-bold text-xl mb-2">💼 Outcomes</h4>' +
+            '<p class="text-gray-300">Curated deal-making, startup showcases, sponsor visibility and strategic MoUs.</p>' +
+          '</div>' +
+        '</div>' +
+
+        '<div class="grid md:grid-cols-2 gap-12">' +
+          '<div>' +
+            '<h3 class="text-2xl font-bold mb-4">Summit Highlights</h3>' +
+            '<ul class="list-disc list-inside text-gray-300 space-y-2">' +
+              '<li>Startup pitch & demo sessions</li>' +
+              '<li>Investor roundtables</li>' +
+              '<li>Government & ecosystem panels</li>' +
+              '<li>Closed-door B2B meetings</li>' +
+            '</ul>' +
+          '</div>' +
+          '<div>' +
+            '<h3 class="text-2xl font-bold mb-4">Organiser</h3>' +
+            '<p class="text-gray-300 mb-6">' +
+              '<strong>Valleytop Communications Finland Oy</strong><br>' +
+              'Connecting innovation, capital and global markets.' +
+            '</p>' +
+            '<a href="#packages" class="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300">' +
+              'View Participation Packages' +
+            '</a>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</section>' +
+
+    /* ================= PACKAGES SECTION ================= */
+    '<section id="packages">' +
+      '<div class="bg-gray-900 p-14 rounded-2xl border border-yellow-500">' +
+
+        '<div class="text-center mb-20">' +
+          '<h2 class="text-4xl md:text-5xl font-extrabold text-yellow-400 mb-4">' +
+            'Participation Packages' +
+          '</h2>' +
+          '<p class="text-gray-300 text-lg">' +
+            'Sponsors • Delegates • Exhibitors' +
+          '</p>' +
+        '</div>' +
+
+        '<h3 class="text-3xl font-bold mb-10">🏆 Sponsorship Packages</h3>' +
+        '<div class="grid md:grid-cols-3 gap-10 mb-24">' +
+
+          '<div class="bg-black p-8 rounded-xl border border-yellow-500">' +
+            '<h4 class="text-2xl font-bold text-yellow-400 mb-2">Platinum Sponsor</h4>' +
+            '<p class="text-xl font-semibold mb-4">€10,000</p>' +
+            '<ul class="text-gray-300 space-y-2">' +
+              '<li>• Lead / Title Partner visibility</li>' +
+              '<li>• Keynote speaking slot</li>' +
+              '<li>• VIP access</li>' +
+              '<li>• Exhibition Booth included</li>' +
+            '</ul>' +
+          '</div>' +
+
+          '<div class="bg-black p-8 rounded-xl border border-gray-700">' +
+            '<h4 class="text-2xl font-bold mb-2">Gold Sponsor</h4>' +
+            '<p class="text-xl font-semibold mb-4">€7,000</p>' +
+            '<ul class="text-gray-300 space-y-2">' +
+              '<li>• Strategic Partner status</li>' +
+              '<li>• Panel participation</li>' +
+              '<li>• Exhibition Booth included</li>' +
+            '</ul>' +
+          '</div>' +
+
+          '<div class="bg-black p-8 rounded-xl border border-gray-700">' +
+            '<h4 class="text-2xl font-bold mb-2">Silver Sponsor</h4>' +
+            '<p class="text-xl font-semibold mb-4">€5,000</p>' +
+            '<ul class="text-gray-300 space-y-2">' +
+              '<li>• Supporting Partner status</li>' +
+              '<li>• Brand visibility</li>' +
+              '<li>• Exhibition Booth included</li>' +
+            '</ul>' +
+          '</div>' +
+        '</div>' +
+
+        '<h3 class="text-3xl font-bold mb-10">🎟️ Delegate Packages</h3>' +
+        '<div class="grid md:grid-cols-3 gap-10 mb-24">' +
+
+          '<div class="bg-black p-8 rounded-xl border border-yellow-500">' +
+            '<h4 class="text-2xl font-bold text-yellow-400 mb-2">Executive Delegate</h4>' +
+            '<p class="text-xl font-semibold mb-4">€2,000</p>' +
+            '<ul class="text-gray-300 space-y-2">' +
+              '<li>• VIP & closed-door sessions</li>' +
+              '<li>• Priority matchmaking</li>' +
+            '</ul>' +
+          '</div>' +
+
+          '<div class="bg-black p-8 rounded-xl border border-gray-700">' +
+            '<h4 class="text-2xl font-bold mb-2">Professional Delegate</h4>' +
+            '<p class="text-xl font-semibold mb-4">€1,250</p>' +
+            '<ul class="text-gray-300 space-y-2">' +
+              '<li>• Full summit access</li>' +
+              '<li>• Curated networking</li>' +
+            '</ul>' +
+          '</div>' +
+
+          '<div class="bg-black p-8 rounded-xl border border-gray-700">' +
+            '<h4 class="text-2xl font-bold mb-2">Startup Delegate</h4>' +
+            '<p class="text-xl font-semibold mb-4">€750</p>' +
+            '<ul class="text-gray-300 space-y-2">' +
+              '<li>• Summit access</li>' +
+              '<li>• Ecosystem sessions</li>' +
+            '</ul>' +
+          '</div>' +
+        '</div>' +
+
+        '<h3 class="text-3xl font-bold mb-6">🏢 Exhibitors</h3>' +
+        '<p class="text-xl font-semibold mb-4">€2,000 per Booth • 10 slots only</p>' +
+        '<ul class="text-gray-300 space-y-3 text-lg">' +
+          '<li>• Equal booth sizes and incentives</li>' +
+          '<li>• Direct investor exposure</li>' +
+          '<li class="text-yellow-400 font-semibold">• Guaranteed 3-minute live pitch for every Exhibitor</li>' +
+        '</ul>' +
+
+        '<a href="#contact" class="inline-block mt-10 bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300">' +
+          'Apply Now' +
+        '</a>' +
+
+      '</div>' +
+    '</section>' +
+
+    '</div>';
+
+  const footer = document.querySelector("footer");
+  if (footer) {
+    document.body.insertBefore(summitWrapper, footer);
+  } else {
+    document.body.appendChild(summitWrapper);
+  }
+
+})();
+</script>
 
 <script>
   // WhatsApp Floating Button
