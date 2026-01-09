@@ -276,49 +276,37 @@ Niemikatu 6-8 A 4
     <!-- Countdown -->
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
 
-  const daysEl = document.getElementById("vDays");
-  const hoursEl = document.getElementById("vHours");
-  const minutesEl = document.getElementById("vMinutes");
-  const secondsEl = document.getElementById("vSeconds");
-
-  // Safety check
-  if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
-    console.warn("Valutok countdown elements not found");
-    return;
-  }
-
-  const eventDate = new Date("March 25, 2026 09:00:00").getTime();
+  const eventTime = new Date("2026-03-25T09:00:00+02:00").getTime();
 
   function updateValutokCountdown() {
-    const now = new Date().getTime();
-    const diff = eventDate - now;
+    const now = Date.now();
+    const diff = eventTime - now;
 
-    if (diff <= 0) {
-      daysEl.textContent = "0";
-      hoursEl.textContent = "0";
-      minutesEl.textContent = "0";
-      secondsEl.textContent = "0";
-      return;
-    }
+    const days = Math.max(0, Math.floor(diff / (1000 * 60 * 60 * 24)));
+    const hours = Math.max(0, Math.floor((diff / (1000 * 60 * 60)) % 24));
+    const minutes = Math.max(0, Math.floor((diff / (1000 * 60)) % 60));
+    const seconds = Math.max(0, Math.floor((diff / 1000) % 60));
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
+    const d = document.getElementById("vDays");
+    const h = document.getElementById("vHours");
+    const m = document.getElementById("vMinutes");
+    const s = document.getElementById("vSeconds");
 
-    daysEl.textContent = days;
-    hoursEl.textContent = hours;
-    minutesEl.textContent = minutes;
-    secondsEl.textContent = seconds;
+    if (!d || !h || !m || !s) return;
+
+    d.textContent = days;
+    h.textContent = hours;
+    m.textContent = minutes;
+    s.textContent = seconds;
   }
 
-  updateValutokCountdown(); // run immediately
+  updateValutokCountdown();
   setInterval(updateValutokCountdown, 1000);
-});
-</script>
 
+})();
+</script>
 
     <!-- Packages -->
     <div class="grid md:grid-cols-3 gap-10 mb-20">
